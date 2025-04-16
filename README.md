@@ -12,65 +12,63 @@ This project aims to predict the prices of the top 10 cryptocurrencies for the y
 ## Requirements
 The required packages are listed in the `requirements.txt` file. Below is the content of the file:
 
-pandas yfinance matplotlib seaborn scikit-learn numpy requests
+Content of `requirements.txt`:
+```
+pandas
+yfinance
+matplotlib
+seaborn
+scikit-learn
+numpy
+requests
+```
 
-bash
-Копировать
-Редактировать
+### Installation
 
-## Installation
-
-1. **Clone the repository:**
-   ```bash
+1. Clone the repository:
+```bash
    git clone https://github.com/sadyrll/crypto-price-prediction.git
    cd crypto-price-prediction
+```
 Install the required packages:
 
-bash
-Копировать
-Редактировать
+```bash
+   pip install -r requirements.txt
+```
 pip install -r requirements.txt
-Data Sources
-Prices: Collected via yfinance.
+### Data Sources
 
-News Titles: Collected from CryptoPanic or NewsAPI.
+- **Prices**: Collected via [`yfinance`](https://github.com/ranaroussi/yfinance)
+- **News Titles**: Collected from [`CryptoPanic`](https://cryptopanic.com/developers/api/) or `NewsAPI`
 
-Tracked Cryptocurrencies
-Bitcoin (BTC)
+Tracked cryptocurrencies:
+- Bitcoin (BTC), Ethereum (ETH), Solana (SOL), Avalanche (AVAX),
+- Polkadot (DOT), Litecoin (LTC), Chainlink (LINK),
+- Binance Coin (BNB), Ripple (XRP), Cardano (ADA)
 
-Ethereum (ETH)
+---
 
-Solana (SOL)
+### 📈 Models Implemented
 
-Avalanche (AVAX)
+| Model               | Features Used                   | MSE (Test)     |
+|--------------------|----------------------------------|----------------|
+| Linear Regression  | Price, SMA (30 days)             | ~4000–5000     |
+| Random Forest      | Price, SMA (30 days)             | ~3000–4000     |
 
-Polkadot (DOT)
+Prediction Visuals:
 
-Litecoin (LTC)
+<div align="center">
+	<img src="assets/linear_regression.png" width="75%" />
+</div>
 
-Chainlink (LINK)
+_Linear Regression with SMA feature on Bitcoin_
 
-Binance Coin (BNB)
+<div align="center">
+	<img src="assets/random_forest.png" width="75%" />
+</div>
 
-Ripple (XRP)
+_Random Forest prediction on Bitcoin_
 
-Cardano (ADA)
-
-Models Implemented
-
-Model	Features Used	MSE (Test)
-Linear Regression	Price, SMA (30 days)	~4000–5000
-Random Forest	Price, SMA (30 days)	~3000–4000
-Prediction Visuals
-Linear Regression with SMA Feature on Bitcoin
-
-Random Forest Prediction on Bitcoin
-
-Assets Folder
-The assets folder contains the following files:
-
-linear_regression.png – Visualization for Linear Regression predictions.
-
-random_forest.png – Visualization for Random Forest predictions.
-
-placeholder.txt – Placeholder file for additional assets or notes.
+---
+### Author
+- Nurgali Aibar
