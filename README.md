@@ -27,7 +27,7 @@ requests
 
 1. Clone the repository:
 ```bash
-   git clone https://github.com/sadyrll/crypto-price-prediction.git
+   git clone https://github.com/loadcosmos/crypto-price-prediction.git
    cd crypto-price-prediction
 ```
 Install the required packages:
